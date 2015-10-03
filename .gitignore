@@ -24,3 +24,7 @@ Thumbs.db
 
 # Compiled Python files
 *.pyc
+
+*.iml
+
+idea

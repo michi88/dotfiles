@@ -99,6 +99,11 @@ complete -W "NSGlobalDomain" defaults
 # aws autocompletion
 complete -C aws_completer aws
 
+# add git completion (curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash)
+if [ -f ~/.git-completion.bash ]; then
+  source ~/.git-completion.bash
+fi
+
 ##
 ## better `cd`'ing
 ##
