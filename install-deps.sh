@@ -9,6 +9,9 @@ bash < <( curl https://raw.github.com/jamiew/git-friendly/master/install.sh)
 # rvm for the rubiess
 curl -L https://get.rvm.io | bash -s stable --ruby
 
+# install npm
+brew install npm
+
 # https://github.com/isaacs/nave
 # needs npm, obviously.
 # TODO: I think i'd rather curl down the nave.sh, symlink it into /bin and use that for initial node install.
@@ -19,7 +22,9 @@ npm install -g nave
 # you need the code CLI tools YOU FOOL.
 ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)
 
-
+# some dir's we need
+mkdir -p ~/code
+mkdir -p ~/.ssh/master
 
 # https://github.com/rupa/z
 # z, oh how i love you
