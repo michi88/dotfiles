@@ -115,5 +115,12 @@ shopt -s nocaseglob;
 shopt -s cdspell;
 
 # add pyenv and pyenv-virtualenv
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv > /dev/null; then
+  eval "$(pyenv init -)";
+  if which brew > /dev/null; then
+    # have brew use system python
+    alias brew="env PATH=${PATH//$(pyenv root)\/shims:/} brew";
+  fi
+fi
+
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
