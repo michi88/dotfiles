@@ -33,6 +33,7 @@
 	attributesfile = ~/.gitattributes
 	# insanely beautiful diffs
 	pager = bash -lc 'diff-highlight | strip_diff_leading_symbols | less -r' -
+	autocrlf = input
 [color "branch"]
 	current = yellow reverse
 	local = yellow
