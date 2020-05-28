@@ -13,7 +13,7 @@ case $- in
 esac
 
 
-ln -sf "$(brew --prefix)/share/git-core/contrib/diff-highlight/diff-highlight" ~/bin/diff-highlight
+# ln -sf "$(brew --prefix)/share/git-core/contrib/diff-highlight/diff-highlight" /usr/local/bin/diff-highlight
 
 # generic colouriser
 GRC=`which grc`
@@ -125,4 +125,21 @@ fi
 
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
+if which jenv > /dev/null; then
+  export PATH="$HOME/.jenv/bin:$PATH";
+  eval "$(jenv init -)";
+fi
+
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+# The next line updates PATH for the Google Cloud SDK.
+# source '/Users/michael/sites/google-cloud-sdk/path.bash.inc'
+
+# The next line enables bash completion for gcloud.
+# source '/Users/michael/sites/google-cloud-sdk/completion.bash.inc'
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/michael/sites/google-cloud-sdk/path.bash.inc' ]; then . '/Users/michael/sites/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/michael/sites/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/michael/sites/google-cloud-sdk/completion.bash.inc'; fi

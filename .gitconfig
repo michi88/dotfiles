@@ -29,7 +29,7 @@
 	ui = always
 
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/michael/.gitignore
 	attributesfile = ~/.gitattributes
 	# insanely beautiful diffs
 	pager = bash -lc 'diff-highlight | strip_diff_leading_symbols | less -r' -
@@ -95,3 +95,12 @@
 [user]
 	name = Michael Krens
 	email = mkrens@gmail.com
+	signingkey = 077A0D0CD0867E94
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[credential]
+	helper = osxkeychain
