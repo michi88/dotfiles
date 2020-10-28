@@ -77,9 +77,9 @@ export NVM_DIR="$HOME/.nvm"
 
 
 
-# z beats cd most of the time. `brew install z`
+# z beats cd most of the time. `git clone https://github.com/rupa/z.git ~/code/z`
 if which brew > /dev/null; then
-    zpath="$(brew --prefix)/etc/profile.d/z.sh"
+    zpath="~/code/z/z.sh"
     [ -s $zpath ] && source $zpath
 fi;
 

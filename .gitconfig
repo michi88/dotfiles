@@ -108,3 +108,6 @@
 [log]
 	date = relative
 
+[user]
+	name = Michael Krens
+	email = mkrens@gmail.com
